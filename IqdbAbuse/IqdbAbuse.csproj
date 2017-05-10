@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="output.txt" />
+    <None Remove="output_excel.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IqdbApi" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
