@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Diagnostics.Tracing;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -1197,7 +1196,7 @@ namespace IqdbAbuse
 
                     if (e.Message.Contains("403"))
                     {
-                        Thread.Sleep(30*60*1000);
+                        Thread.Sleep(70*60*1000);
                     }
 
                     counter++;
@@ -1221,7 +1220,7 @@ namespace IqdbAbuse
 
         private static void Wait()
         {
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
 
             //var dif = DateTimeOffset.Now - _lastRequest;
 
@@ -1231,6 +1230,7 @@ namespace IqdbAbuse
             //}
         }
 
+        
         private static void WriteLog(double elapsedTotalSeconds, string status, string isFound, string url, string mes, string source = "Error")
         {
             var formattableString = $"{DateTimeOffset.Now:dd.MM HH:mm:ss}\t{elapsedTotalSeconds:##.000}\t{status}\t{isFound}\t{source}\t{url}\t{mes.Replace('\n', ' ').Replace('\r', ' ')}";
